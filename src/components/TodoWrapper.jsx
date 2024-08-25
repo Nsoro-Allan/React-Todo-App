@@ -3,6 +3,7 @@ import TodoForm from "./TodoForm";
 import { v4 as uuidv4 } from "uuid";
 import Todo from "./Todo";
 import EditTodoForm from "./EditTodoForm";
+import TodoIcon from "./icon.png";
 uuidv4();
 
 const TodoWrapper = () => {
@@ -45,7 +46,7 @@ const TodoWrapper = () => {
   };
   return (
     <div className="TodoWrapper">
-      <h1 className="todo-heading">MY - TODO APP</h1>
+      <h1 className="todo-heading"><img src={TodoIcon} alt="Icon" /> MY - TODO APP</h1>
       <TodoForm addTodo={addTodo} />
       {todos.map((todo, index) =>
         todo.isEditing ? (
